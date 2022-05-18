@@ -71,7 +71,7 @@ export function setLocale(locale) {
       _locale = resolvedLocale;
       window.dispatchEvent(new CustomEvent("locale-updated"));
     } else {
-      import(`../assets/locales/${resolvedLocale}.json`).then(({ default: localeData }) => {
+      import(`../assets/locales/pt.json`).then(({ default: localeData }) => {
         _locale = resolvedLocale;
         _localeData = localeData;
         window.dispatchEvent(new CustomEvent("locale-updated"));
