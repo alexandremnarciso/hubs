@@ -4,15 +4,15 @@ import { AVAILABLE_LOCALES, FALLBACK_LOCALES } from "../assets/locales/locale_co
 // These are set in the admin panel and are only included as fallbacks.
 const defaultLocaleData = {
   "app-name": "App",
-  "editor-name": "Scene Editor",
+  "editor-name": "Editor de Cena",
   "contact-email": "app@company.com",
-  "company-name": "Company",
+  "company-name": "Empresa",
   "share-hashtag": "#app",
-  "app-description": "Gather share and collaborate together in a virtual, private and safe space",
-  "app-tagline": "Private social VR in your web browser"
+  "app-description": "Reúna, compartilhe e colabore juntos em um espaço virtual, privado e seguro",
+  "app-tagline": "RV social privada no seu navegador da web"
 };
 
-const DEFAULT_LOCALE = "en";
+const DEFAULT_LOCALE = "pt";
 const cachedMessages = new Map();
 
 let _locale = DEFAULT_LOCALE;
@@ -60,6 +60,7 @@ function findLocale(locale) {
 
 export function setLocale(locale) {
   const resolvedLocale = findLocale(locale);
+  console.log("resolvedLocale", resolvedLocale);
 
   if (resolvedLocale === DEFAULT_LOCALE) {
     _locale = resolvedLocale;
